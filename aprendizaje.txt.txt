@@ -1,1 +1,3 @@
 Este archivo fue creado para realizar mi primer ejercicio utilizando Git.
+
+Es una aplicación que nos ayuda a realizar o editar un repositorio sea para un código o texto
