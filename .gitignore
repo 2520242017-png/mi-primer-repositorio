@@ -1,1 +1,8 @@
+# Excluir un archivo específico
+archivo.txt
 
+# Excluir una carpeta
+carpeta_privada/
+
+# Excluir todos los archivos LOG
+*.log
