@@ -1,3 +1,1 @@
-En pocas palabras el pull request es una solitud que se realiza en gitup para realizar o proponer cambios en un repositorio. Esto nos ayuda a facilitar el trabajo colaborativo entre git y githud y estos permiten nos permite realizar cambios futuros a nuestro proyecto en proceso, cómo un control de versiones pero lanzado en la wed.
-
-Este es el contenido realizado desde Task1.
+El Pull Request permite proponer cambios y mejorar el trabajo colaborativo en un repositorio.
