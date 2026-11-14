@@ -1,1 +1,1 @@
-El Pull Request permite proponer cambios y mejorar el trabajo colaborativo en un repositorio.
+El Pull Request permite proponer, revisar y aprobar cambios para mejorar el trabajo colaborativo en GitHub.
