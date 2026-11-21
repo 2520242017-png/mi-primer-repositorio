@@ -170,3 +170,24 @@ def editar_libro(
 
     conexion.commit()
     conexion.close()
+
+def buscar_por_autor(autor):
+
+    conexion = conectar()
+    cursor = conexion.cursor(dictionary=True)
+
+    sql = """
+        SELECT *
+        FROM libros
+        WHERE autor LIKE %s
+    """
+
+    busqueda = f"%{autor}%"
+
+    cursor.execute(sql, (busqueda,))
+
+    resultados = cursor.fetchall()
+
+    conexion.close()
+
+    return resultados
