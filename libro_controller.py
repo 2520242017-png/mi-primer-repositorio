@@ -36,10 +36,15 @@ def registrar_libro(titulo, autor):
 
     return False
 
-
 def listar_libros():
 
-    return obtener_libros()
+    libros = obtener_libros()
+
+    guardar_log(
+        f"Consulta de libros: {len(libros)} encontrados"
+    )
+
+    return libros
 
 
 def prestar_libro(id_libro):
