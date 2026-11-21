@@ -1,3 +1,6 @@
+# Modificación realizada en feature/version1
+# Modificación realizada en feature/version2
+# Modificación realizada en feature/version3
 from libro_model import (
     agregar_libro,
     obtener_libros,
@@ -12,29 +15,36 @@ from log_controller import guardar_log
 
 def registrar_libro(titulo, autor):
 
-    if titulo and autor:
+    if not titulo or not titulo.strip():
+        return False
 
-        resultado = agregar_libro(
-            titulo,
-            autor
+    if not autor or not autor.strip():
+        return False
+
+    resultado = agregar_libro(
+        titulo.strip(),
+        autor.strip()
+    )
+
+    if resultado:
+
+        guardar_log(
+            f"Libro agregado: {titulo}"
         )
 
-        if resultado:
-
-            guardar_log(
-                f"Libro agregado: {titulo}"
-            )
-
-            return True
-
-        return False
+        return True
 
     return False
 
-
 def listar_libros():
 
-    return obtener_libros()
+    libros = obtener_libros()
+
+    guardar_log(
+        f"Consulta de libros: {len(libros)} encontrados"
+    )
+
+    return libros
 
 
 def prestar_libro(id_libro):
