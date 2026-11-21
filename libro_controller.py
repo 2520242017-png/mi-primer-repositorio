@@ -15,22 +15,24 @@ from log_controller import guardar_log
 
 def registrar_libro(titulo, autor):
 
-    if titulo and autor:
+    if not titulo or not titulo.strip():
+        return False
 
-        resultado = agregar_libro(
-            titulo,
-            autor
+    if not autor or not autor.strip():
+        return False
+
+    resultado = agregar_libro(
+        titulo.strip(),
+        autor.strip()
+    )
+
+    if resultado:
+
+        guardar_log(
+            f"Libro agregado: {titulo}"
         )
 
-        if resultado:
-
-            guardar_log(
-                f"Libro agregado: {titulo}"
-            )
-
-            return True
-
-        return False
+        return True
 
     return False
 
